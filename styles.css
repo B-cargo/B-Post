@@ -81,19 +81,60 @@ h1 {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Allow positioning of pseudo-element */
 }
 
-.business-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Card title */
+/* Circle near the card title */
 .business-item h3 {
     font-size: 22px;
     font-weight: 700;
     color: #333;
     margin-bottom: 10px;
+    position: relative; /* To position the circle near the title */
+    display: flex; /* Flexbox for aligning title and circle */
+    align-items: center; /* Vertically center the title and circle */
+    justify-content: center; /* Horizontally center the title and circle */
+    gap: 10px; /* Space between the title and circle */
+    animation: colorChange 3s ease-in-out infinite; /* Animation to change text color */
+}
+
+/* Adding a medium green spot circle near each title */
+.business-item h3::before {
+    content: "";
+    width: 12px; /* Circle size */
+    height: 12px;
+    background-color: #01a530; /* Green color */
+    border-radius: 50%;
+    animation: fadeScale 2s infinite; /* Apply animation */
+}
+
+/* Animation for fade-in, fade-out, and scaling */
+@keyframes fadeScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/* Animation to change text color between green and black */
+@keyframes colorChange {
+    0% {
+        color: #01a530; /* Green */
+    }
+    50% {
+        color: #000000; /* Black */
+    }
+    100% {
+        color: #01a530; /* Green */
+    }
 }
 
 /* Address and contact details */
