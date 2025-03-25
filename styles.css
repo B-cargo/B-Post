@@ -127,13 +127,13 @@ h1 {
 /* Animation to change text color between green and black */
 @keyframes colorChange {
     0% {
-        color: #01a530; /* Green */
+        color: #dbd800 ; /* Green */
     }
     50% {
         color: #000000; /* Black */
     }
     100% {
-        color: #01a530; /* Green */
+        color: #dbd800 ; /* Green */
     }
 }
 
