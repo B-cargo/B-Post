@@ -10,7 +10,7 @@ body {
     font-family: 'Peshang Des 2', sans-serif;
     font-size: 33px;
     background-color: #ef0000;
-    color: #ffffff;
+    color: #ffff00; /* Change text color to yellow */
     line-height: 1.6;
     display: flex;
     justify-content: center;
@@ -84,6 +84,11 @@ h1 {
     position: relative; /* Allow positioning of pseudo-element */
 }
 
+/* Zoom-in effect on hover (now 1.08) */
+.business-item:hover {
+    transform: scale(1.08); /* Zoom in by 1.08 */
+}
+
 /* Circle near the card title */
 .business-item h3 {
     font-size: 22px;
@@ -127,13 +132,13 @@ h1 {
 /* Animation to change text color between green and black */
 @keyframes colorChange {
     0% {
-        color: #dbd800 ; /* Green */
+        color: #01a530; /* Green */
     }
     50% {
         color: #000000; /* Black */
     }
     100% {
-        color: #dbd800 ; /* Green */
+        color: #01a530; /* Green */
     }
 }
 
